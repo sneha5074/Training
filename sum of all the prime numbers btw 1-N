@@ -1,0 +1,21 @@
+#include <stdio.h>
+void main()
+{
+    int n,i,j,sum=0;
+    printf("enter the value of n: ");
+    scanf("%d",&n);
+    for(j=2;j<=n;j++)
+    {
+        for(i=2;i<j;i++)
+        {
+            if(j%i==0)
+            break;
+        }
+        if(i==j)
+        {
+        printf("%d ",i);
+        sum=sum+i;
+        }
+    }
+    printf("\n sum of all prime numbers btw 1 to %d is %d",n,sum);
+}
